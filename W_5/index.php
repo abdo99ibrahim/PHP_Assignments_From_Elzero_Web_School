@@ -205,4 +205,193 @@ elseif($day == "Thu" || $day == "Fri"){
 }else{
     echo "Unknown Day";
 }
+echo "<hr>";
+?>
+
+<?php
+##########################
+##### [37-42] Task 1 #####
+##########################
+$index = 10;
+while($index>=1){
+    echo "$index <br>";
+    $index --;
+}
+echo "<hr>";
+?>
+
+
+<?php
+##########################
+##### [37-42] Task 2 #####
+##########################
+$index = 0;
+// USING FOR LOOP
+for(;$index<=20;$index+=2){
+    if($index == 0){
+        continue;
+    }
+    else{
+        echo "$index <br>";
+    }
+}
+echo "<hr>";
+// USING WHILE LOOP
+$index = 0;
+while($index < 20){
+    $index += 2;
+    if($index === 0){
+        continue;
+    }
+    else{
+        echo "$index <br>";
+    }
+}
+echo "<hr>";
+// USING DO-WHILE LOOP
+$index = 0;
+do{
+    $index += 2;
+    if($index === 0){
+        continue;
+    }
+    else{
+        echo "$index <br>";
+    } 
+}while($index < 20);
+echo "<hr>";
+?>
+
+<?php
+##########################
+##### [37-42] Task 3 #####
+##########################
+$num = 2;
+while ($num < 520) {
+  if($num == 2){
+    $num =1;
+  }
+  echo "$num <br>";
+  $num = ($num +1)*2;
+  /*
+  1
+  (1 + 1) * 2 = 4
+  (4 + 1) * 2 = 10
+  (10 + 1) * 2 = 22
+  (22 + 1) * 2 = 46
+  (46 + 1) * 2 = 94
+  (94 + 1) * 2 = 190
+  (190 + 1) * 2 = 382
+  (382 + 1) * 2 = 766 ==> X 
+  */
+}
+echo "<hr>";
+?>
+
+<?php
+##########################
+##### [37-42] Task 4 #####
+##########################
+$start = 10;
+$end = 0;
+$stop = 3;
+for($i=$start;$i >= $stop;$i--):
+    if($i == $start){
+        echo "$i <br>";
+    }
+    else{
+        echo "$end$i <br>";
+
+    }
+endfor;    
+echo "<hr>";
+?>
+
+<?php
+##########################
+##### [37-42] Task 5 #####
+##########################
+$start = 0;
+$mix = [1, 2, 3, "A", "B", "C", 4];
+for($i = $start;$i<count($mix);$i++){
+    if($mix[$i] == $mix[$start] OR (gettype($mix[$i]) !== (gettype($start)))){
+        continue;
+    }
+    else{
+        echo "$mix[$i] <br>";
+    }
+}
+echo "<hr>";
+?>
+
+
+<?php
+##########################
+##### [37-42] Task 6 #####
+##########################
+$money = ["Ahmed" => 100, "Sayed" => 150, "Osama" => 100, "Maher" => 250];
+foreach($money as $name=>$pound){
+    echo "The Name Is $name And I Need $pound Pound From Him <br>";
+}
+echo "<hr>";
+?>
+
+<?php
+##########################
+##### [37-42] Task 7 #####
+##########################
+$mix = [1, 2, "A", "B", "C", 3, 4];
+$countInteger = 0;
+$countString = 0;
+foreach($mix as $item){
+    if(gettype($item) == "integer"){
+        $countInteger++;
+        echo "$item <br>";
+    }
+    if(gettype($item)=="string"){
+        $countString++;
+    }
+}
+echo "$countInteger Numbers Printed <br>";
+echo "$countString Letters Ignored";
+echo "<hr>";
+?>
+
+<?php
+##########################
+##### [37-42] Task 8 #####
+##########################
+$nums = [1, 13, 12, 20, 51, 17, 30];
+foreach($nums as $even){
+    if($even % 2 == 0){
+        echo $even / 2 ."<br>";
+    }
+    else{
+        continue;
+    }
+}
+echo "<hr>";
+?>
+
+<?php
+##########################
+##### [37-42] Task 9 #####
+##########################
+$help_num = 3;
+$nums = [4, 5, 6, 1, 2, 3];
+$names = ["Ahmed", "Sayed", "Osama", "Mahmoud", "Gamal"];
+for($i=$help_num;$i<count($names);$i++){
+echo $names[$nums[$i]]."<br>";
+}
+echo "<hr>";
+?>
+<?php
+##########################
+##### [37-42] Task 10 #####
+##########################
+$help_num = 4;
+$nums = [2, 4, 5, 6, 10];
+foreach($nums as $key=>$value){
+    echo $value." + " . $nums[$help_num - $key] ." = ".$value + $nums[$help_num - $key] . "<br>";
+}
 ?>

@@ -247,3 +247,130 @@ echo "<hr>";
 </body>
 </html>
 <?php endif; ?>
+
+<?php echo str_repeat("#",80) . "<br>" . "<span style='font-weight:bold;color:red'>Part 2</span>" . "<br>" .str_repeat("#",80)."<br>" ?>
+
+<?php
+####################
+##### Video 37 #####
+####################
+  /*
+    Control Structure
+    - Loop
+
+    While
+  */
+  $i=1;
+  while($i <=3){
+    echo "$i <br>";
+    $i++;
+  }
+
+  $i=1;
+  while($i <=3):
+    echo "$i <br>";
+    $i++;
+  endwhile;
+echo "<hr>";
+####################
+##### Video 38 #####
+####################
+  /*
+    Control Structure
+    - Loop
+
+    Do, While
+  */
+  $i=1;
+  do{
+      echo "Do-While { $i } <br>";
+      $i++;
+  }while($i <=3);
+echo "<br>";
+
+
+  $i=4;
+  do{
+      echo "Do-While { $i } <br>";
+      $i++;
+  }while($i <=3);
+  echo "<hr>";
+  
+####################
+##### Video 39 #####
+####################
+  /*
+    Control Structure
+    - Loop
+
+    For
+    - Expression One Run Once At The First Of The Loop
+    - In The Begining Of Iteration Expression Two Is Checked [If True Continue || Break]
+    - At The End Of Iteration Expression Three Are Executed
+  */
+  for($i=1;$i<=3;$i++){
+    echo "For { $i } <br>";
+  }
+  echo "<hr>";
+
+
+####################
+##### Video 40 #####
+####################
+  /*
+    Control Structure
+    - Loop
+
+    Foreach
+  */
+  $countries = ["EG", "SA", "QA", "SY"];
+  echo '<pre>';
+  print_r($countries);
+  echo '</pre>';
+echo "<br>";
+  foreach($countries as $country){
+    echo $country . "<br>";
+  }
+  echo "<br>";
+$countries_with_discount = ["EG" => 50, "SA" => 30, "QA" => 50, "SY" => 70];
+echo '<pre>';
+print_r($countries_with_discount);
+echo '</pre>';
+
+foreach($countries_with_discount as $country=>$discount):
+    echo "Country Name Is $country And Discount Is $discount <br>";
+endforeach;
+echo "<hr>";
+
+####################
+##### Video 41 #####
+####################
+  /*
+    Control Structure
+    - Loop
+
+    Break, Continue
+    - Break Ends Execution Of (For, Foreach, While, Do-while or Switch)
+    - Skip Current Iteration
+  */
+    $countries = ["EG", "SA", "QA", "SY"];
+    foreach($countries as $country){
+        if($country =="SA"){
+            continue;
+        }
+        echo $country . "<br>";
+      }
+echo "<hr>";
+####################
+##### Video 42 #####
+####################
+  /*
+    Control Structure
+    - Including Files
+
+    Include
+    Require
+  */
+  include("./ar.php");
+  require("./ar.php");
+?>
